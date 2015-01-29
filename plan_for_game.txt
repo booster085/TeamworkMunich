@@ -1,0 +1,23 @@
+1) Main
+            while isFounded || count < 15/10/20
+           
+ 
+2) Cows
+            printCow
+            checkCow
+3) Bull
+            isBull[]
+            printBull
+            checkBull
+4) Help
+            printInfo
+            helpCow    -> printCow
+            helpBull    -> printBull
+            restart
+            letter/number
+5) Number
+            createNum
+            enterNum
+            VerifyNum
+                    1111        Error! Enter only digits, and all different.
+                    fjejej        Error! Enter only digits, and all different.  

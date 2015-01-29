@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class Number {
 	public static int[] createNumber(){
-		//creating array
+		//creating array 10,10,10,10 because digits are from 0-9
 		int[] numArr= {10,10,10,10};
 		Random rnd = new Random();
 		Integer countOfNumbersInArray = 0;
@@ -30,6 +30,51 @@ public class Number {
 				}
 			}
 		}
+		return numArr;
+	}
+
+	public static int[] verifyNumber(String numStr){
+		int[] numArr = {10,10,10,10};
+		
+		// verifying the input
+		// checking if the number is smaller that 4 digits
+		if (numStr.length()<4 || numStr.length()>=5){
+			System.out.println("Error! Enter 4 digits, and all different!");
+			//SHOULD BE CHANGED TO TRY NUMBER Method
+			BullsAndCows.startGame();
+		}
+		// trying to parse string to int
+		try {
+			int num= Integer.parseInt(numStr);
+		} catch (Exception e) {
+			System.out.println("Error! Enter ONLY digits");
+			//restarting the game
+			//SHOULD BE CHANGED TO TRY NUMBER Method
+			BullsAndCows.startGame();
+		}
+		//parsing string to int array
+		String[] strArr=numStr.split("");
+		int countOfParsedNumbers=0;
+		for (int i = 0; i < strArr.length; i++) {
+			Integer numToParse=Integer.parseInt(strArr[i]);
+			boolean isSame=false;
+			//verifying that guess number doesn't consist of same digits (like 2323 -wrong num)
+			for (int j = 0; j < countOfParsedNumbers+1; j++) {
+				if (numToParse.equals(numArr[j])){
+					isSame=true;
+					break;
+				}
+			}
+			if(!isSame){
+				numArr[i]=numToParse;
+				countOfParsedNumbers++;
+			}else{
+				System.out.println("Error! Digits should be different!");
+				//SHOULD BE CHANGED TO TRY NUMBER Method
+				BullsAndCows.startGame();
+			}
+		}
+
 		return numArr;
 	}
 }
