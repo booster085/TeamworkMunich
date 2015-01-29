@@ -1,3 +1,4 @@
+Classes     Methods
 1) Main
             while isFounded || count < 15/10/20
            
