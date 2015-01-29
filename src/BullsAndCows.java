@@ -2,8 +2,10 @@
 public class BullsAndCows {
 
 	public static void main(String[] args) {
-		System.out.println("Start");
-		Bulls.printBulls();
+		int[] num=Number.createNumber();
+		for (int n : num) {
+			System.out.println(n);
+		}
 	}
 		
 }
