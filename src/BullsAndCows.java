@@ -8,13 +8,18 @@ public class BullsAndCows {
 		startGame();
 	}
 	public static void startGame(){
-		int[] num=Number.createNumber();
+		int[] compNumber=Number.createNumber();
 		Scanner scan=new Scanner(System.in);
 		String guessNum=scan.next();
 		int[] guessNumber=Number.verifyNumber(guessNum);
+		System.out.println(Bulls.countBulls(guessNumber, compNumber));
+		
 		for (int i : guessNumber) {
-			System.out.println(i);
+			System.out.print(i);
+		}
+		System.out.println();
+		for (int i : compNumber) {
+			System.out.print(i);
 		}
 	}
 }
-
