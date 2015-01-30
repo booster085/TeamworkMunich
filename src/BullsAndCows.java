@@ -36,9 +36,9 @@ public class BullsAndCows {
 			}
 			 int[] guessNumber=Number.verifyNumber(guessNum);
 			//printing secret number for tests
-			for (int i : compNumber) {
-				System.out.print(i);
-			}
+//			for (int i : compNumber) {
+//				System.out.print(i);
+//			}
 			//counting Bulls and Cows
 			int cows= Cows.countCows(guessNumber, compNumber);
 			int bulls= Bulls.countBulls(guessNumber, compNumber);
