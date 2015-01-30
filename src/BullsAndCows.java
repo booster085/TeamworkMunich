@@ -12,7 +12,7 @@ public class BullsAndCows {
 		Scanner scan=new Scanner(System.in);
 		String guessNum=scan.next();
 		int[] guessNumber=Number.verifyNumber(guessNum);
-		System.out.println(Bulls.countBulls(guessNumber, compNumber));
+		System.out.println(Cows.countCows(guessNumber, compNumber));
 		
 		for (int i : guessNumber) {
 			System.out.print(i);
