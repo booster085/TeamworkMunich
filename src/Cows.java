@@ -12,4 +12,8 @@ public class Cows {
 			}
 		return cows;
 	}
+	public static void helpCow(int[] compNumber){
+		
+		System.out.println("cow");
+	}
 }

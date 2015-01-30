@@ -11,4 +11,8 @@ public class Bulls {
 		}
 		return bulls;
 	}
+	public static void helpBull(int[] compNumber){
+		
+		System.out.println("bull");
+	}
 }

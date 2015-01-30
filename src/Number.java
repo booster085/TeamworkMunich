@@ -36,22 +36,27 @@ public class Number {
 
 	public static int[] verifyNumber(String numStr){
 		int[] numArr = {10,10,10,10};
-		
+
 		// verifying the input
 
 		// checking if the number is smaller that 4 digits
 		if (numStr.length()<4 || numStr.length()>=5){
+			if(!BullsAndCows.isGuessed){
 			System.out.println("Error! Enter 4 digits, and all different!");
 			//ask again the number
 			BullsAndCows.startGame();
+			}
 		}else{
 			// trying to parse string to int
 			try {
 				int num= Integer.parseInt(numStr);
 			} catch (Exception e) {
-				System.out.println("Error! Enter ONLY digits");
-				//ask again the number
-				BullsAndCows.startGame();
+				// !BullsAndCows.isGuessed checking if the game has finished
+				if(!BullsAndCows.isGuessed){
+					System.out.println("Error! Enter ONLY digits");
+					//ask again the number
+					BullsAndCows.startGame();
+					}
 			}
 		}
 		//parsing string to int array

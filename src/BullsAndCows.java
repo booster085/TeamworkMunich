@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class BullsAndCows {
 	//creating a computer number
 	static int[] compNumber=Number.createNumber();
+	static boolean isGuessed= false;
 
 	public static void main(String[] args) {
 		//rules of the game
@@ -13,15 +14,31 @@ public class BullsAndCows {
 	}
 	public static void startGame(){
 		Scanner scan=new Scanner(System.in);
-		boolean isGuessed= false;
+		
 		while (!isGuessed){
 			System.out.println("enter a num");
 			String guessNum=scan.next();
-			int[] guessNumber=Number.verifyNumber(guessNum);
+			switch (guessNum) {
+			case "info":
+				getInfo();
+				startGame();
+				break;
+			case "cow":
+				Cows.helpCow(compNumber);
+				startGame();
+				break;
+			case "bull":
+				Bulls.helpBull(compNumber);
+				startGame();
+				break;
+			default:
+				break;
+			}
+			 int[] guessNumber=Number.verifyNumber(guessNum);
 			//printing secret number for tests
-//			for (int i : compNumber) {
-//				System.out.print(i);
-//			}
+			for (int i : compNumber) {
+				System.out.print(i);
+			}
 			//counting Bulls and Cows
 			int cows= Cows.countCows(guessNumber, compNumber);
 			int bulls= Bulls.countBulls(guessNumber, compNumber);
@@ -35,5 +52,9 @@ public class BullsAndCows {
 				System.out.println("Congratulations");
 			}
 		}
+	}
+	private static void getInfo() {
+		// Method with ifno about the game
+		System.out.println("info");
 	}
 }
