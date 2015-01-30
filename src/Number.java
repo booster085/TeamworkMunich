@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.Scanner;
 
 
 public class Number {
@@ -37,20 +38,21 @@ public class Number {
 		int[] numArr = {10,10,10,10};
 		
 		// verifying the input
+
 		// checking if the number is smaller that 4 digits
 		if (numStr.length()<4 || numStr.length()>=5){
 			System.out.println("Error! Enter 4 digits, and all different!");
-			//SHOULD BE CHANGED TO TRY NUMBER Method
+			//ask again the number
 			BullsAndCows.startGame();
-		}
-		// trying to parse string to int
-		try {
-			int num= Integer.parseInt(numStr);
-		} catch (Exception e) {
-			System.out.println("Error! Enter ONLY digits");
-			//restarting the game
-			//SHOULD BE CHANGED TO TRY NUMBER Method
-			BullsAndCows.startGame();
+		}else{
+			// trying to parse string to int
+			try {
+				int num= Integer.parseInt(numStr);
+			} catch (Exception e) {
+				System.out.println("Error! Enter ONLY digits");
+				//ask again the number
+				BullsAndCows.startGame();
+			}
 		}
 		//parsing string to int array
 		String[] strArr=numStr.split("");
@@ -70,7 +72,7 @@ public class Number {
 				countOfParsedNumbers++;
 			}else{
 				System.out.println("Error! Digits should be different!");
-				//SHOULD BE CHANGED TO TRY NUMBER Method
+				//ask again number
 				BullsAndCows.startGame();
 			}
 		}
