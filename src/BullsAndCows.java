@@ -14,7 +14,10 @@ public class BullsAndCows {
 	}
 	public static void startGame(){
 		Scanner scan=new Scanner(System.in);
-		
+		//menu: info -> provides rules 
+		//		cow  -> returns you a number from computerNumber
+		//		bull -> returns you a bull example **3*
+		//		4345 -> entering a number -> continue the game
 		while (!isGuessed){
 			System.out.println("enter a num");
 			String guessNum=scan.next();

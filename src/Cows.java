@@ -12,6 +12,7 @@ public class Cows {
 			}
 		return cows;
 	}
+	//method that returns a digit from a secretNumber(computerNumber) example: 4
 	public static void helpCow(int[] compNumber){
 		
 		System.out.println("cow");
