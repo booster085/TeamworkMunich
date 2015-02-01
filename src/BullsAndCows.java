@@ -10,6 +10,7 @@ public class BullsAndCows {
 	public static void main(String[] args) {
 		//rules of the game
 		System.out.println("This is Bulls and Cows game");
+		System.out.println("az sam Stanimir");
 		startGame();
 	}
 	public static void startGame(){
@@ -24,36 +25,39 @@ public class BullsAndCows {
 			switch (guessNum) {
 			case "info":
 				getInfo();
-				startGame();
 				break;
 			case "cow":
 				Cows.helpCow(compNumber);
-				startGame();
 				break;
 			case "bull":
 				Bulls.helpBull(compNumber);
-				startGame();
 				break;
 			default:
+				engine(guessNum);
 				break;
 			}
-			 int[] guessNumber=Number.verifyNumber(guessNum);
-			//printing secret number for tests
-//			for (int i : compNumber) {
-//				System.out.print(i);
-//			}
-			//counting Bulls and Cows
-			int cows= Cows.countCows(guessNumber, compNumber);
-			int bulls= Bulls.countBulls(guessNumber, compNumber);
-			//printing how many are bulls and cows
-			System.out.printf("Bulls:%d Cows:%d", bulls, cows);
-			//new line
-			System.out.println();
-			//condition to get out of while
-			if (bulls==4){
-				isGuessed=true;
-				System.out.println("Congratulations");
-			}
+		}
+	}
+	public static void engine(String guessNum){
+		int[] guessNumber=Number.verifyNumber(guessNum);
+		if (guessNumber == null) {
+			return;
+		}
+		//printing secret number for tests
+		for (int i : compNumber) {
+			System.out.print(i);
+		}
+		//counting Bulls and Cows
+		int cows= Cows.countCows(guessNumber, compNumber);
+		int bulls= Bulls.countBulls(guessNumber, compNumber);
+		//printing how many are bulls and cows
+		System.out.printf("Bulls:%d Cows:%d", bulls, cows);
+		//new line
+		System.out.println();
+		//condition to get out of while
+		if (bulls==4){
+			isGuessed=true;
+			System.out.println("Congratulations");
 		}
 	}
 	private static void getInfo() {

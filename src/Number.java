@@ -44,7 +44,8 @@ public class Number {
 			if(!BullsAndCows.isGuessed){
 			System.out.println("Error! Enter 4 digits, and all different!");
 			//ask again the number
-			BullsAndCows.startGame();
+//			BullsAndCows.startGame();
+			return null;
 			}
 		}else{
 			// trying to parse string to int
@@ -55,8 +56,9 @@ public class Number {
 				if(!BullsAndCows.isGuessed){
 					System.out.println("Error! Enter ONLY digits");
 					//ask again the number
-					BullsAndCows.startGame();
-					}
+//					BullsAndCows.startGame();
+					return null;
+				}
 			}
 		}
 		//parsing string to int array
@@ -78,7 +80,8 @@ public class Number {
 			}else{
 				System.out.println("Error! Digits should be different!");
 				//ask again number
-				BullsAndCows.startGame();
+//				BullsAndCows.startGame();
+				return null;
 			}
 		}
 

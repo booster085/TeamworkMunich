@@ -14,6 +14,6 @@ public class Bulls {
 	//method that returns a digit from a secretNumber exampleL: **8*
 	public static void helpBull(int[] compNumber){
 		
-		System.out.println("bull");
+		System.out.println("**2*");
 	}
 }
