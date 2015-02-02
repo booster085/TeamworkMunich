@@ -23,7 +23,7 @@ public class InfoPage {
 		System.out.println("|______________________________|");
 
 		try {
-			Thread.sleep(200);
+			Thread.sleep(15000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
