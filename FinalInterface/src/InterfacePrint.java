@@ -74,20 +74,17 @@ public class InterfacePrint {
 					System.out.print(stringConstructor.get(i));
 				}
 			} else if (errCodes == 5) {
-
 				stringConstructor
 						.add("****__|" + errMsg[errCodes - 1]
 								+ Cows.helpCows(errCodes) + "________________"
 								+ "|\n|");
 				for (int i = 0; i < rows; i++) {
-
 					System.out.print(stringConstructor.get(i));
 				}
 			} else {
 				stringConstructor.add("****__|" + errMsg[errCodes - 1]
 						+ "_______________" + "|\n|");
 				for (int i = 0; i < rows; i++) {
-
 					System.out.print(stringConstructor.get(i));
 				}
 			}
