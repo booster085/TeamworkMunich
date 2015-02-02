@@ -13,11 +13,8 @@ public class InterfacePrint {
 		int counter = 0;
 		int tableStart = 0;
 		String[] errMsg = { "_Entered equal digits!_",
-							"__Enter ONLY digits!___",
-							"____Congratulations____",
-							"__Enter_ONLY_4_digits!_",
-							"__Cow:",
-							"__Bull:" };
+				"__Enter ONLY digits!___", "____Congratulations____",
+				"__Enter_ONLY_4_digits!_", "__Cow:", "_<-_Bull" };
 
 		boolean isFinished = false;
 		/*
@@ -63,18 +60,36 @@ public class InterfacePrint {
 			}
 		} else {
 			if (errCodes < 5) {
+				if (errCodes == 3) {
+					stringConstructor.add("****__|" + errMsg[errCodes - 1]
+							+ "|\n|");
+					for (int i = 0; i < rows; i++) {
+						System.out.print(stringConstructor.get(i));
+					}
+					System.exit(0);
+				}
+				stringConstructor
+						.add("****__|" + errMsg[errCodes - 1] + "|\n|");
+				for (int i = 0; i < rows; i++) {
+					System.out.print(stringConstructor.get(i));
+				}
+			} else if (errCodes == 5) {
 
-				stringConstructor.add("****__|" + errMsg[errCodes - 1] + "|\n|");
+				stringConstructor
+						.add("****__|" + errMsg[errCodes - 1]
+								+ Cows.helpCows(errCodes) + "________________"
+								+ "|\n|");
 				for (int i = 0; i < rows; i++) {
 
 					System.out.print(stringConstructor.get(i));
 				}
 			} else {
-				stringConstructor.add("****__|" + errMsg[errCodes - 1]+ Cows.helpCows(errCodes) +"________________" + "|\n|");
+				stringConstructor.add("****__|" + errMsg[errCodes - 1]
+						+ "_______________" + "|\n|");
 				for (int i = 0; i < rows; i++) {
 
-			System.out.print(stringConstructor.get(i));
-		}
+					System.out.print(stringConstructor.get(i));
+				}
 			}
 			rows++;
 			errCodes = 0;

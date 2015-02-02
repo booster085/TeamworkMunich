@@ -15,10 +15,11 @@ public class InfoPage {
 		System.out.println("|of a hidden number. You should|");
 		System.out.println("|enter a 4 digit positive      |");
 		System.out.println("|number without any duplucated |");
-		System.out.println("|digits. You can type -bull to |");
-		System.out.println("|to reveal a bull digit and    |");
-		System.out.println("|position. Also type -cows to  |");
-		System.out.println("|to reveal a cow digit.        |");
+		System.out.println("|digits. You can type -b reveal|");
+		System.out.println("|a bull digit and its unique   |");
+		System.out.println("|position. Also type -c reveal |");
+		System.out.println("|a cow digit.  Type -h for help|");
+		System.out.println("|and -q to quit the game.      |");
 		System.out.println("|______________________________|");
 
 		try {

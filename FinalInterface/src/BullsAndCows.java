@@ -61,9 +61,4 @@ public class BullsAndCows {
 			}
 		}
 	}
-
-	private static void getInfo() {
-		// Method with info about the game
-		System.out.println("info");
-	}
 }

@@ -46,16 +46,24 @@ public class Number {
 		// verifying the input
 		// checking if the number is smaller that 4 digits
 		switch (numStr) {
-		case "-cows":
+		case "-c":
 			errCode = 5;
 			InterfacePrint.printInterface();
+			break;
+		case "-b":
+			errCode = 6;
+			InterfacePrint.printInterface();
+			break;
+		case "-h":
+			InfoPage.printInfo();
+			break;
+		case "-q":
+			System.exit(0);
 			break;
 
 		default:
 			break;
 		}
-			
-		
 		if (numStr.length() != 4) { // Stan: Change to != instead of < 4 || >= 5
 			if (!BullsAndCows.isGuessed) {
 				errCode = 4;// Stan: I changed the statement
