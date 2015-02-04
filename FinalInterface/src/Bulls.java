@@ -15,10 +15,31 @@ public class Bulls {
 
 	// method that returns a digit from a secretNumber exampleL: **8*
 
-	public static int helpBulls(int bull) {
+	public static String helpBulls(int bull) {
 		int randomBull = 0;
 		Random rnd = new Random();
 		randomBull = Number.numArr[rnd.nextInt(4)];
-		return randomBull;
+		int position = 0;
+		String Bull = "";
+		for(int i = 0; i<Number.numArr.length;i++){
+			if(Number.numArr[i] == randomBull)
+			{
+				position=i+1;
+			}
+		}
+		if(position==1){
+			
+			Bull = randomBull+"***";
+		}
+		if(position==2){
+			Bull = "*"+randomBull+"**";
+		}
+		if(position==3){
+			Bull = "**"+randomBull+"*";
+		}
+		if(position==4) {
+			Bull = "***"+randomBull;
+		}
+		return Bull;
 	}
 }

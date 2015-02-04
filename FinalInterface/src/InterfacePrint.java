@@ -13,8 +13,11 @@ public class InterfacePrint {
 		int counter = 0;
 		int tableStart = 0;
 		String[] errMsg = { "_Entered equal digits!_",
-				"__Enter ONLY digits!___", "____Congratulations____",
-				"__Enter_ONLY_4_digits!_", "__Cow:", "_<-_Bull" };
+							"__Enter ONLY digits!___", 
+							"____Congratulations____",
+							"__Enter_ONLY_4_digits!_", 
+							"__Cow:", 
+							"__Bull:" };
 
 		boolean isFinished = false;
 		/*
@@ -82,8 +85,8 @@ public class InterfacePrint {
 					System.out.print(stringConstructor.get(i));
 				}
 			} else {
-				stringConstructor.add("****__|" + errMsg[errCodes - 1]
-						+ "_______________" + "|\n|");
+				stringConstructor.add(Bulls.helpBulls(errCodes) +"__|" + errMsg[errCodes - 1]
+						+ "________________" + "|\n|");
 				for (int i = 0; i < rows; i++) {
 					System.out.print(stringConstructor.get(i));
 				}
