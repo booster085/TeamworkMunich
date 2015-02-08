@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Number {
 	public static String numForRecord = ""; // Stan: This is for printing the
-	static int errCode = 0; // number in interface
+	static int errCode = 0; //Error number in interface
 	static int[] numArr = new int[4];
 	
 	public static int[] createNumber() {
@@ -58,7 +58,7 @@ public class Number {
 			InfoPage.printInfo();
 			break;
 		case "-q":
-			System.exit(0);
+			InterfacePrint.endInterface();
 			break;
 
 		default:

@@ -5,14 +5,10 @@ public class Intro {
 		String gameText = "BULLS AND COWS";
 		String teamText = "Created by Team Munich";
 		String memberText = "Kiril, Martin, Stanimir";
-		int animeSpeed = 150;
-/*		try {
-			Runtime.getRuntime().exec("cls");
-		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-			return;
-		}*/
-		System.out.print("\033[2J\033[1;1H");
+		int animeSpeed = 100;
+
+	    System.out.print("\033[2J\033[1;1H");
+
 		System.out.println(" ____________________________\n");
 		for (int i = 0; i < gameText.length(); i++) {
 
@@ -54,7 +50,7 @@ public class Intro {
 		}
 		System.out.println(" ____________________________");
 		try {
-			Thread.sleep(200);
+			Thread.sleep(1200);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

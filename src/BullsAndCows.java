@@ -5,9 +5,10 @@ public class BullsAndCows {
 	static int[] compNumber = Number.createNumber();
 	static boolean isGuessed = false;
 	static int isEnd = 0;
-	static int errCode =0;
+	static int errCode = 0;
 	static int cows = 0;
 	static int bulls = 0;
+
 	public static void main(String[] args) {
 		// rules of the game
 		// System.out.println("This is Bulls and Cows game"); Stan: Adding a new
@@ -19,10 +20,9 @@ public class BullsAndCows {
 		 * try { Thread.sleep(3000); } catch (InterruptedException e) {
 		 * e.printStackTrace(); }
 		 */
-
-		InterfacePrint.printInterface();
-		startGame(); // Stan:Removeing the starting of the game. It will
-		// be started from interface
+			InterfacePrint.printInterface();
+			startGame(); // Stan:Removeing the starting of the game. It will
+			// be started from interface
 	}
 
 	public static void startGame() {
@@ -49,10 +49,12 @@ public class BullsAndCows {
 			cows = Cows.countCows(guessNumber, compNumber);
 			bulls = Bulls.countBulls(guessNumber, compNumber);
 			// printing how many are bulls and cows
-			//System.out.printf("Bulls:%d Cows:%d", bulls, cows); //Stan: This is printed in interface
+			// System.out.printf("Bulls:%d Cows:%d", bulls, cows); //Stan: This
+			// is printed in interfaNumber.createNumber();ce
 			InterfacePrint.printInterface();
 			// new line
-			//System.out.println(); Stan: New lines should be handled by interface
+			// System.out.println(); Stan: New lines should be handled by
+			// interface
 			// condition to get out of while
 			if (bulls == 4) {
 				isGuessed = true;
